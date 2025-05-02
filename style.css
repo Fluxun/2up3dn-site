@@ -1,9 +1,10 @@
+
 :root {
-  --bg: #181818;
-  --text: #f0f0f0;
-  --accent: #a33;
-  --card: #222;
-  --border: #a33;
+  --bg: #1f1f1f;
+  --text: #e6e6e6;
+  --accent: #7993a2;
+  --card: #2a2a2a;
+  --border: #7993a2;
   --gap: 2rem;
   --max-width: 1200px;
   --detail-font: 'Inter', sans-serif;
@@ -11,11 +12,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111;
-    --text: #eee;
-    --accent: #a33;
-    --card: #1b1b1b;
-    --border: #a33;
+    --bg: #181818;
+    --text: #eaeaea;
+    --accent: #7993a2;
+    --card: #222;
+    --border: #7993a2;
   }
 }
 
@@ -30,7 +31,7 @@ body {
   position: relative;
   height: 48vh;
   overflow: hidden;
-  background: #111;
+  background: var(--bg);
 }
 
 .video-bg iframe {
@@ -76,14 +77,14 @@ body {
   width: 100%;
   border: 4px solid var(--border);
   display: block;
-  transition: transform 0.3s ease, filter 0.2s;
+  transition: transform 0.3s ease, filter 0.3s;
   cursor: pointer;
-  background: #222;
+  background: #000;
 }
 
 .artwork:hover img {
-  transform: scale(1.015);
-  filter: brightness(1.2);
+  transform: scale(1.01);
+  filter: brightness(1.1) contrast(1.05);
 }
 
 .artwork h3 {
@@ -96,6 +97,23 @@ body {
 .details {
   font-size: 0.95rem;
   font-family: var(--detail-font);
-  color: #ccc;
+  color: #bbb;
   margin-bottom: 0.3rem;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid var(--accent);
 }
