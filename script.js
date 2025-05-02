@@ -1,9 +1,21 @@
-document.querySelectorAll('[data-filter]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.getAttribute('data-filter');
-    document.querySelectorAll('.artwork').forEach(card => {
-      const match = filter === 'all' || card.classList.contains(filter);
-      card.style.display = match ? 'inline-block' : 'none';
+
+document.querySelectorAll('[data-filter]').forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+    document.querySelectorAll('.artwork').forEach(el => {
+      const match = filter === 'all' || el.classList.contains(filter);
+      el.style.display = match ? 'inline-block' : 'none';
     });
   });
+});
+
+const lightbox = document.getElementById('lightbox');
+document.querySelectorAll('.artwork img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightbox.querySelector('img').src = img.src;
+  });
+});
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
 });
