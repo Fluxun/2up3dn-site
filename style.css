@@ -114,6 +114,14 @@ body {
 
 .lightbox img {
   max-width: 90vw;
+
+  ...
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 1;
+  }
+}
   max-height: 90vh;
   border: 4px solid var(--accent);
 }
