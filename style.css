@@ -125,3 +125,18 @@ body {
   max-height: 90vh;
   border: 4px solid var(--accent);
 }
+
+.logo-header {
+  height: 48vh;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-logo {
+  max-width: 300px;
+  width: 60%;
+  height: auto;
+  opacity: 0.95;
+}
