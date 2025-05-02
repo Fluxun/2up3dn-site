@@ -27,19 +27,28 @@ body {
   color: var(--text);
 }
 
-.video-header, .logo-header {
+.logo-header {
   height: 48vh;
   background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .centered-logo {
-  max-width: 180px;
+  max-width: 260px;
   width: 100%;
   height: auto;
   opacity: 0.95;
+  transform-style: preserve-3d;
+  animation: globeSpin 40s linear infinite;
+  backface-visibility: hidden;
+}
+
+@keyframes globeSpin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
 }
 
 .gallery-wrap {
@@ -125,17 +134,3 @@ body {
   max-height: 90vh;
   border: 4px solid var(--accent);
 }
-
-.logo-header {
-  height: 48vh;
-  background-color: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-}
-@keyframes globeSpin {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
-}
-
