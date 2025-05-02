@@ -134,3 +134,8 @@ body {
   justify-content: center;
   perspective: 1000px;
 }
+@keyframes globeSpin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
