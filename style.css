@@ -1,10 +1,10 @@
 
 :root {
-  --bg: #1f1f1f;
-  --text: #e6e6e6;
-  --accent: #7993a2;
-  --card: #2a2a2a;
-  --border: #7993a2;
+  --bg: #444c52;
+  --text: #e1e1e1;
+  --accent: #7c9cb3;
+  --card: #3a4046;
+  --border: #7c9cb3;
   --gap: 2rem;
   --max-width: 1200px;
   --detail-font: 'Inter', sans-serif;
