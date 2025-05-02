@@ -10,6 +10,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+
 <nav class="main-menu">
   <a href="#gallery">Gallery</a>
   <a href="#about">About</a>
@@ -20,17 +21,10 @@
   <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
 </header>
 
-
 <main class="gallery-wrap">
-  <nav>
-    <button data-filter="all">All</button>
-    <button data-filter="posthuman">Post Human (Oil)</button>
-    <button data-filter="charcoal">Dark Charcoal (Mixed Media)</button>
-    <button data-filter="portraits">Portraits</button>
-    <button data-filter="other">Other</button>
-  </nav>
 
-  <section class="gallery-group">
+  <section class="gallery-group" id="gallery">
+    <h2>Post Human (Oil)</h2>
     <div class="gallery">
       <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36&quot; x 48&quot; – Oil on Canvas</p></div>
       <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
@@ -42,14 +36,14 @@
     </div>
   </section>
 
-  <section>
+  <section id="about">
     <h2>About the Artist</h2>
     <p>I paint what breaks. Figures in descent, coded rituals, smiles too wide.</p>
     <p>Born in Yorkshire, UK, and living in the USA for most of my life, I am a self-taught artist working primarily in oil paint. My work is rooted in figurative and portrait painting, but rather than telling direct stories, I focus on capturing something deeper—an emotional state, a tension, or a sense of transformation.</p>
     <p>Recently, my work has explored the Bio-Mechanical Mythos and Post-Human Surrealism, blending organic and mechanical elements to examine identity, evolution, and what it means to exist in this changing world.</p>
   </section>
 
-  <section>
+  <section id="videos">
     <h2>Process Videos</h2>
     <div class="gallery">
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/gm1xgrYk_xk" frameborder="0" allowfullscreen></iframe>
@@ -58,6 +52,7 @@
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/PfxfMPRtnnI" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
+
 </main>
 
 <div class="lightbox" id="lightbox">
