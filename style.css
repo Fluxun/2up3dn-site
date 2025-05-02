@@ -41,9 +41,9 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.95;
-  animation: globeSpin 40s linear infinite;
   transform-style: preserve-3d;
-  backface-visibility: visible; /* ← THIS LINE */
+  animation: globeSpin 40s linear infinite;
+  backface-visibility: hidden;
 }
 
 @keyframes globeSpin {
@@ -157,4 +157,30 @@ body {
 .main-menu a:hover {
   opacity: 1;
   border-bottom: 1px solid var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-menu a.active {
+  border-bottom: 2px solid var(--accent);
+  opacity: 1;
+}
+
+.shop-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-family: var(--detail-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+.shop-button:hover {
+  background: #a3bccc;
 }
