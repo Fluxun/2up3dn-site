@@ -125,3 +125,16 @@ body {
   max-height: 90vh;
   border: 4px solid var(--accent);
 }
+
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.centered-logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  opacity: 0.95;
+  animation: slowSpin 40s linear infinite;
+}
