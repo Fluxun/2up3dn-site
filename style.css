@@ -41,9 +41,9 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.95;
-  transform-style: preserve-3d;
   animation: globeSpin 40s linear infinite;
-  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: visible; /* ← THIS LINE */
 }
 
 @keyframes globeSpin {
