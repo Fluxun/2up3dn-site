@@ -34,6 +34,7 @@ body {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
+  position: relative;
 }
 
 .centered-logo {
@@ -41,9 +42,16 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.95;
-  animation: globeSpin 20s linear infinite; /* 🌀 was 40s — now twice as fast */
+  animation: globeSpin 20s linear infinite;
   transform-style: preserve-3d;
-  backface-visibility: visible; /* ✅ prevents vanishing mid-spin */
+  backface-visibility: visible;
+  transition: transform 0.4s ease;
+}
+
+.centered-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(124, 156, 179, 0.3));
 }
 
 @keyframes globeSpin {
@@ -204,7 +212,6 @@ html {
   100% { opacity: 1; transform: scale(1); }
 }
 
-
 @keyframes pulseArrow {
   0%, 100% { transform: translateY(0); opacity: 0.6; }
   50% { transform: translateY(8px); opacity: 1; }
@@ -219,7 +226,6 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .scroll-arrow {
   font-size: 2.2rem;
@@ -238,22 +244,10 @@ html {
   opacity: 1;
 }
 
-.logo-header {
-  position: relative;
-}
-
-.centered-logo {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  opacity: 0.95;
-  animation: globeSpin 20s linear infinite;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
-  transition: transform 0.4s ease;
-}
-
-.centered-logo:hover {
-  animation-play-state: paused; /* 🛑 Pause spin */
-  transform: scale(1.08);       /* 🔍 Slight grow */
+#prints {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
