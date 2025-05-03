@@ -41,9 +41,9 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.95;
+  animation: globeSpin 20s linear infinite; /* 🌀 was 40s — now twice as fast */
   transform-style: preserve-3d;
-  animation: globeSpin 40s linear infinite;
-  backface-visibility: hidden;
+  backface-visibility: visible; /* ✅ prevents vanishing mid-spin */
 }
 
 @keyframes globeSpin {
