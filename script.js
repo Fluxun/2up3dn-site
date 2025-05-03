@@ -42,3 +42,12 @@ document.querySelectorAll('.artwork img').forEach(img => {
 lightbox.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
+
+
+const scrollArrow = document.querySelector('.scroll-arrow');
+if (scrollArrow) {
+  scrollArrow.addEventListener('click', () => {
+    const gallery = document.getElementById('artwork');
+    if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });
+  });
+}
