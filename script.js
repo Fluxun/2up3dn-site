@@ -22,3 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener("scroll", setActive);
 });
+
+
+const fadeTarget = document.querySelector('.fade-in');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    fadeTarget.classList.add('visible');
+  }
+});
+
+
+const lightbox = document.getElementById('lightbox');
+document.querySelectorAll('.artwork img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightbox.querySelector('img').src = img.src;
+  });
+});
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
