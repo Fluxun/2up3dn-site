@@ -184,3 +184,44 @@ html {
 .shop-button:hover {
   background: #a3bccc;
 }
+
+.glitch-intro {
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  animation: glitch 1.8s linear both;
+  font-family: 'Special Elite', monospace;
+}
+
+@keyframes glitch {
+  0% { opacity: 0; transform: scale(1.1); }
+  10% { opacity: 1; }
+  30% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  70% { transform: translateX(1px); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  color: var(--accent);
+  animation: pulseArrow 2s infinite;
+  margin-top: 1rem;
+}
+
+@keyframes pulseArrow {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
