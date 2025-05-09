@@ -1,76 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>2up3dn.art</title>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charcoals Gallery – 2up3dn</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: monospace;
+    }
+    header {
+      background: #000;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #444;
+    }
+    nav a {
+      color: #ccc;
+      margin-right: 2rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .piece {
+      position: relative;
+      border: 1px solid #444;
+      padding: 1rem;
+      background: #1a1a1a;
+    }
+    .piece img {
+      width: 100%;
+      display: block;
+    }
+    .piece .info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .hover-gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .piece:hover .hover-gif {
+      display: block;
+    }
+    .piece:hover img.still {
+      display: none;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/charcoals.html">Charcoals</a>
+      <a href="/post-human.html">Post Human (Oil)</a>
+      <a href="/portraits.html">Portraits</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
 
-<nav class="main-menu">
-  <a href="#artwork">Gallery</a>
-  <a href="#prints">Prints</a>
-  <a href="#about">About</a>
-  <a href="#videos">Videos</a>
-</nav>
-
-<header class="logo-header">
-  <div class="glitch-intro">2UP3DN // Bio-Mechanical Mythos</div>
-
-  <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
-  <div class="scroll-arrow">&#x25BC;</div>
-</header>
-
-<main class="gallery-wrap">
-
-  <section class="gallery-group fade-in" id="artwork">
-    <h2>Post Human (Oil)</h2>
-    <div class="gallery">
-      <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36&quot; x 48&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you (WIP)</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/mourning-star.jpg" alt="Mourning Star"><h3>Mourning Star</h3><p class="details">24&quot; x 36&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/lies.jpg" alt="Every Lie"><h3>Every lie you ever told is writ in granite</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/bridle.jpg" alt="Bridle"><h3>Bridle</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/text-dont-call.jpg" alt="Text Don't Call"><h3>Text, Don’t Call</h3><p class="details">24&quot; x 24&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/joy-preset-3.jpg" alt="Joy Preset"><h3>Joy Preset #3</h3><p class="details">48&quot; x 48&quot; – Oil on Masonite</p></div>
+  <main class="gallery">
+    <div class="piece">
+      <img src="images/Power.jpg" alt="Power" class="still">
+      <div class="info">Power<br>35" x 32" on construction paper</div>
     </div>
-    <a class="shop-button" href="https://yourshop.com" target="_blank">Buy Prints</a>
-  </section>
-<section id="prints">
-  <h2>Prints</h2>
-  <p>Prints of selected works are available in limited editions.</p>
-  <ul>
-    <li><strong>Echo in Red</strong> – 12"x16", 18"x24", 24"x32" – <a href="https://yourshop.com/echo">Buy</a></li>
-    <li><strong>Mourning Star</strong> – 12"x18", 20"x30" – <a href="https://yourshop.com/mourning">Buy</a></li>
-    <!-- Add more as you go -->
-  </ul>
-</section>
-  <section id="about">
-    <h2>About the Artist</h2>
-    <p>I paint what breaks. Figures in descent, coded rituals, smiles too wide.</p>
-    <p>Born in Yorkshire, UK, and living in the USA for most of my life, I am a self-taught artist working primarily in oil paint. My work is rooted in figurative and portrait painting, but rather than telling direct stories, I focus on capturing something deeper—an emotional state, a tension, or a sense of transformation.</p>
-    <p>Recently, my work has explored the Bio-Mechanical Mythos and Post-Human Surrealism, blending organic and mechanical elements to examine identity, evolution, and what it means to exist in this changing world.</p>
-  </section>
-
-  <section id="videos">
-    <h2>Process Videos</h2>
-    <div class="gallery">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/gm1xgrYk_xk" frameborder="0" allowfullscreen></iframe>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/8HX4dAeZLhU" frameborder="0" allowfullscreen></iframe>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VWZVKlfd9tY" frameborder="0" allowfullscreen></iframe>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/PfxfMPRtnnI" frameborder="0" allowfullscreen></iframe>
+    <div class="piece">
+      <img src="images/AyBeeSeaDix.jpg" alt="AyBeeSeaDix" class="still">
+      <img src="images/AyBeeSeaDixGIF.gif" alt="AyBeeSeaDix Hover" class="hover-gif">
+      <div class="info">AyBeeSeaDix<br>33" x 36" Charcoal, graphite on construction paper</div>
     </div>
-  </section>
-
-</main>
-
-<div class="lightbox" id="lightbox">
-  <img src="" alt="fullscreen view">
-</div>
-
+    <div class="piece">
+      <img src="images/Needish.jpg" alt="Needish">
+      <div class="info">Needish<br>36" x 30" Charcoal, graphite on construction paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/Shane.jpg" alt="Shane">
+      <div class="info">Shane<br>26" x 36" Charcoal on paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/Sue-for-Peace.jpg" alt="Sue for Peace">
+      <div class="info">Sue for Peace</div>
+    </div>
+    <div class="piece">
+      <img src="images/I-do-Not-Want,-What-I-Cannot-Have.jpg" alt="I do Not Want What I Cannot Have">
+      <div class="info">I do Not Want What I Cannot Have</div>
+    </div>
+    <div class="piece">
+      <img src="images/JackNJill.jpg" alt="JackNJill">
+      <div class="info">JackNJill</div>
+    </div>
+    <div class="piece">
+      <img src="images/Rigsby.jpg" alt="Rigsby">
+      <div class="info">Rigsby</div>
+    </div>
+    <div class="piece">
+      <img src="images/I-Am-Me.jpg" alt="I Am Me">
+      <div class="info">I Am Me</div>
+    </div>
+    <div class="piece">
+      <img src="images/Eights-and-Hearts.jpg" alt="Eights and Hearts">
+      <div class="info">Eights and Hearts</div>
+    </div>
+    <div class="piece">
+      <img src="images/Down-in-the-ground-where-the-dead-men-go.jpg" alt="Down in the Ground Where the Dead Men Go">
+      <div class="info">Down in the Ground Where the Dead Men Go</div>
+    </div>
+  </main>
 </body>
 </html>
