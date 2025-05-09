@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charcoals Gallery – 2up3dn</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: monospace;
+    }
+    header {
+      background: #000;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #444;
+    }
+    nav a {
+      color: #ccc;
+      margin-right: 2rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .piece {
+      position: relative;
+      border: 1px solid #444;
+      padding: 1rem;
+      background: #1a1a1a;
+    }
+    .piece img {
+      width: 100%;
+      display: block;
+    }
+    .piece .info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .hover-gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .piece:hover .hover-gif {
+      display: block;
+    }
+    .piece:hover img.still {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="charcoals.html">Charcoals</a>
+      <a href="#">Post Human (Oil)</a>
+      <a href="#">Portraits</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main class="gallery">
+    <div class="piece">
+      <img src="images/Power.jpg" alt="Power" class="still">
+      <div class="info">Power<br>35" x 32" on construction paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/AyBeeSeaDix.jpg" alt="AyBeeSeaDix" class="still">
+      <img src="images/AyBeeSeaDixGIF.gif" alt="AyBeeSeaDix Hover" class="hover-gif">
+      <div class="info">AyBeeSeaDix<br>33" x 36" Charcoal, graphite on construction paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/Needish.jpg" alt="Needish">
+      <div class="info">Needish<br>36" x 30" Charcoal, graphite on construction paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/Shane.jpg" alt="Shane">
+      <div class="info">Shane<br>26" x 36" Charcoal on paper</div>
+    </div>
+    <div class="piece">
+      <img src="images/Sue-for-Peace.jpg" alt="Sue for Peace">
+      <div class="info">Sue for Peace</div>
+    </div>
+    <div class="piece">
+      <img src="images/I-do-Not-Want,-What-I-Cannot-Have.jpg" alt="I do Not Want What I Cannot Have">
+      <div class="info">I do Not Want What I Cannot Have</div>
+    </div>
+    <div class="piece">
+      <img src="images/JackNJill.jpg" alt="JackNJill">
+      <div class="info">JackNJill</div>
+    </div>
+    <div class="piece">
+      <img src="images/Rigsby.jpg" alt="Rigsby">
+      <div class="info">Rigsby</div>
+    </div>
+    <div class="piece">
+      <img src="images/I-Am-Me.jpg" alt="I Am Me">
+      <div class="info">I Am Me</div>
+    </div>
+    <div class="piece">
+      <img src="images/Eights-and-Hearts.jpg" alt="Eights and Hearts">
+      <div class="info">Eights and Hearts</div>
+    </div>
+    <div class="piece">
+      <img src="images/Down-in-the-ground-where-the-dead-men-go.jpg" alt="Down in the Ground Where the Dead Men Go">
+      <div class="info">Down in the Ground Where the Dead Men Go</div>
+    </div>
+  </main>
+</body>
+</html>
