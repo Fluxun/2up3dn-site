@@ -1,45 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2up3dn – Post-Human Surrealism</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2up3dn.art</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="charcoals.html">Charcoals</a>
-      <a href="#posthuman">Post Human (Oil)</a>
-      <a href="#portraits">Portraits</a>
-      <a href="about.html">About</a>
-    </nav>
-    <div class="intro">
-      <h1>2up3dn.art</h1>
-      <p>Oil paintings from the edge of the biological and mechanical</p>
+
+<nav class="main-menu">
+  <a href="#artwork">Gallery</a>
+  <a href="#about">About</a>
+  <a href="#videos">Videos</a>
+</nav>
+
+<header class="logo-header">
+  <div class="glitch-intro">2UP3DN // Bio-Mechanical Mythos</div>
+
+  <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
+  <div class="scroll-arrow">&#x25BC;</div>
+</header>
+
+<main class="gallery-wrap">
+
+  <section class="gallery-group fade-in" id="artwork">
+    <h2>Post Human (Oil)</h2>
+    <div class="gallery">
+      <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36&quot; x 48&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/mourning-star.jpg" alt="Mourning Star"><h3>Mourning Star</h3><p class="details">24&quot; x 36&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/lies.jpg" alt="Every Lie"><h3>Every lie you ever told is writ in granite</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/bridle.jpg" alt="Bridle"><h3>Bridle</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/text-dont-call.jpg" alt="Text Don't Call"><h3>Text, Don’t Call</h3><p class="details">24&quot; x 24&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/joy-preset-3.jpg" alt="Joy Preset"><h3>Joy Preset #3</h3><p class="details">48&quot; x 48&quot; – Oil on Masonite</p></div>
     </div>
-  </header>
+    <a class="shop-button" href="https://yourshop.com" target="_blank">Buy Prints</a>
+  </section>
 
-  <main>
-    <section id="posthuman" class="gallery">
-      <div class="piece">
-        <img src="images/Echo-in-Red.jpg" alt="Echo in Red">
-        <div class="info">Echo in Red<br>36" x 36" Oil on canvas</div>
-      </div>
-      <div class="piece">
-        <img src="images/Laugh-and-the-World-Laughs-at-You.jpg" alt="Laugh and the World Laughs at You">
-        <div class="info">Laugh and the World Laughs at You<br>30" x 40" Oil on panel</div>
-      </div>
-      <div class="piece">
-        <img src="images/Mourning-Star.jpg" alt="Mourning Star">
-        <div class="info">Mourning Star<br>24" x 30" Oil on canvas</div>
-      </div>
-    </section>
-  </main>
+  <section id="about">
+    <h2>About the Artist</h2>
+    <p>I paint what breaks. Figures in descent, coded rituals, smiles too wide.</p>
+    <p>Born in Yorkshire, UK, and living in the USA for most of my life, I am a self-taught artist working primarily in oil paint. My work is rooted in figurative and portrait painting, but rather than telling direct stories, I focus on capturing something deeper—an emotional state, a tension, or a sense of transformation.</p>
+    <p>Recently, my work has explored the Bio-Mechanical Mythos and Post-Human Surrealism, blending organic and mechanical elements to examine identity, evolution, and what it means to exist in this changing world.</p>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 2up3dn.art</p>
-  </footer>
+  <section id="videos">
+    <h2>Process Videos</h2>
+    <div class="gallery">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/gm1xgrYk_xk" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/8HX4dAeZLhU" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VWZVKlfd9tY" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/PfxfMPRtnnI" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="fullscreen view">
+</div>
+
 </body>
 </html>

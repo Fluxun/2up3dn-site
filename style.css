@@ -34,7 +34,6 @@ body {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-  position: relative;
 }
 
 .centered-logo {
@@ -42,16 +41,9 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.95;
-  animation: globeSpin 20s linear infinite;
   transform-style: preserve-3d;
-  backface-visibility: visible;
-  transition: transform 0.4s ease;
-}
-
-.centered-logo:hover {
-  animation-play-state: paused;
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 10px rgba(124, 156, 179, 0.3));
+  animation: globeSpin 40s linear infinite;
+  backface-visibility: hidden;
 }
 
 @keyframes globeSpin {
@@ -212,6 +204,13 @@ html {
   100% { opacity: 1; transform: scale(1); }
 }
 
+.scroll-arrow {
+  font-size: 2rem;
+  color: var(--accent);
+  animation: pulseArrow 2s infinite;
+  margin-top: 1rem;
+}
+
 @keyframes pulseArrow {
   0%, 100% { transform: translateY(0); opacity: 0.6; }
   50% { transform: translateY(8px); opacity: 1; }
@@ -225,6 +224,19 @@ html {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.scroll-arrow {
+  font-size: 2.5rem;
+  color: var(--accent);
+  animation: pulseArrow 2s infinite;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.scroll-arrow:hover {
+  transform: translateY(10px) scale(1.2);
+  opacity: 1;
 }
 
 .scroll-arrow {
@@ -244,10 +256,6 @@ html {
   opacity: 1;
 }
 
-#prints {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+.logo-header {
+  position: relative;
 }
