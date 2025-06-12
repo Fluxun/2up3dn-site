@@ -15,6 +15,11 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+<form name="contact" netlify hidden>
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <textarea name="message"></textarea>
+</form>
 <!-- 🔺 Contact Button at Top -->
 <header id="contact-button-top" style="background:#222; padding:1rem; text-align:center; font-family:'Courier New', monospace; border-bottom:1px solid #444;">
   <button onclick="document.getElementById('contact-banner-bottom').scrollIntoView({behavior:'smooth'})"
