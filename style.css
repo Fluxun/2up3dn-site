@@ -259,3 +259,25 @@ html {
 .logo-header {
   position: relative;
 }
+.notify-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #222;
+  color: #00b0f0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #00b0f0;
+  font-family: monospace;
+  z-index: 9999;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #00b0f0;
+}
+.notify-banner a {
+  color: #00b0f0;
+  text-decoration: none;
+}
+.notify-banner a:hover {
+  text-decoration: underline;
+}
+
