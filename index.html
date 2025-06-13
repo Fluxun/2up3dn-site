@@ -15,12 +15,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-<form name="contact" netlify hidden>
-  <input type="hidden" name="form-name" value="contact">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <textarea name="message"></textarea>
-</form>
+
 <!-- 🔺 Contact Button at Top -->
 <header id="contact-button-top" style="background:#222; padding:1rem; text-align:center; font-family:'Courier New', monospace; border-bottom:1px solid #444;">
   <button onClick="document.getElementById('contact-banner-bottom').scrollIntoView({behavior:'smooth'})"
@@ -38,23 +33,21 @@
 
 <header class="logo-header">
   <div class="glitch-intro">2UP3DN // Bio-Mechanical Mythos</div>
-
   <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
   <div class="scroll-arrow">&#x25BC;</div>
 </header>
 
 <main class="gallery-wrap">
-
   <section class="gallery-group fade-in" id="artwork">
     <h2>Post Human (Oil)</h2>
     <div class="gallery">
-      <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36&quot; x 48&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you (WIP)</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/mourning-star.jpg" alt="Mourning Star"><h3>Mourning Star</h3><p class="details">24&quot; x 36&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/lies.jpg" alt="Every Lie"><h3>Every lie you ever told is writ in granite</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/bridle.jpg" alt="Bridle"><h3>Bridle</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/text-dont-call.jpg" alt="Text Don't Call"><h3>Text, Don’t Call</h3><p class="details">24&quot; x 24&quot; – Oil on Canvas</p></div>
-      <div class="artwork posthuman"><img src="images/joy-preset-3.jpg" alt="Joy Preset"><h3>Joy Preset #3</h3><p class="details">48&quot; x 48&quot; – Oil on Masonite</p></div>
+      <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36" x 48" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you (WIP)</h3><p class="details">30" x 40" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/mourning-star.jpg" alt="Mourning Star"><h3>Mourning Star</h3><p class="details">24" x 36" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/lies.jpg" alt="Every Lie"><h3>Every lie you ever told is writ in granite</h3><p class="details">30" x 40" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/bridle.jpg" alt="Bridle"><h3>Bridle</h3><p class="details">30" x 40" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/text-dont-call.jpg" alt="Text Don't Call"><h3>Text, Don’t Call</h3><p class="details">24" x 24" – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/joy-preset-3.jpg" alt="Joy Preset"><h3>Joy Preset #3</h3><p class="details">48" x 48" – Oil on Masonite</p></div>
     </div>
     <a class="shop-button" href="https://yourshop.com" target="_blank">Buy Prints</a>
   </section>
@@ -75,54 +68,21 @@
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/PfxfMPRtnnI" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
-
 </main>
 
 <div class="lightbox" id="lightbox">
   <img src="" alt="fullscreen view">
 </div>
+
 <!-- 🔻 BOTTOM Contact Banner -->
 <footer id="contact-banner-bottom" style="background:#222; color:#ff0; padding:2rem; text-align:center; font-family:'Courier New', monospace; border-top:2px solid #888;">
   <h2 style="font-size:1.2rem; letter-spacing:0.5px;">Inquiries @ 2up3dn</h2>
-  
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="max-width:500px; margin:2rem auto; text-align:left;">
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
-    <p>
-      <label for="name" style="color:#ff0;">Name:</label><br>
-      <input id="name" type="text" name="name" placeholder="Your Name" required style="width:100%; padding:0.75rem; margin-bottom:1rem; background:#111; color:#fff; border:1px solid #555;">
-    </p>
-    <p>
-      <label for="email" style="color:#ff0;">Email:</label><br>
-      <input id="email" type="email" name="email" placeholder="Your Email" required style="width:100%; padding:0.75rem; margin-bottom:1rem; background:#111; color:#fff; border:1px solid #555;">
-    </p>
-    <p>
-      <label for="message" style="color:#ff0;">Message:</label><br>
-      <textarea id="message" name="message" placeholder="Your Message" required style="width:100%; padding:0.75rem; height:150px; margin-bottom:1rem; background:#111; color:#fff; border:1px solid #555;"></textarea>
-    </p>
-    <p><div data-netlify-recaptcha="true"></div></p>
-    <p>
-      <button type="submit" style="background:#ff7300; color:#000; font-weight:bold; padding:0.5rem 1rem; border:none; cursor:pointer;">Send</button>
-    </p>
-    <p id="form-success" style="display:none; color:#0f0; font-weight:bold; margin-top:1rem; text-align:center;">Message sent.</p>
-  </form>
-
-  <p style="text-align:center; margin-top:1rem; font-size:0.9rem; color:#aaa;">
-    Or email us directly at <a href="mailto:info@2up3dn.art" style="color:#ff7300;">info@2up3dn.art</a>
+  <p style="margin:2rem 0;">
+    <a href="mailto:info@2up3dn.art" style="background:#ff7300; color:#000; padding:0.75rem 1.5rem; font-weight:bold; border:none; cursor:pointer; text-decoration:none; font-family:'Courier New', monospace;">
+      Email info@2up3dn.art
+    </a>
   </p>
 </footer>
 
-
-<!-- 🔁 Netlify Success Handler -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  if (window.location.search.includes("success=true")) {
-    const msg = document.getElementById("form-success");
-    if (msg) msg.style.display = "block";
-  }
-});
-</script>
 </body>
 </html>
