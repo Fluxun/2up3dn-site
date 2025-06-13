@@ -15,14 +15,14 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-
-<nav class="main-menu">
-  <a href="#artwork">Gallery</a>
-  <a href="charcoals.html">Charcoals</a>
-  <a href="#about">About</a>
-  <a href="#videos">Videos</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<div id="nav-placeholder"></div>
+<script>
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
 
 <header class="logo-header">
   <div class="glitch-intro">2UP3DN // Bio-Mechanical Mythos</div>
