@@ -262,16 +262,18 @@ html {
 .notify-banner {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 0;
   background-color: #222;
   color: #00b0f0;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.5rem;
   border: 1px solid #00b0f0;
   font-family: monospace;
   z-index: 9999;
-  font-size: 0.85rem;
-  border-radius: 4px;
+  font-size: 0.75rem;
+  border-radius: 8px 0 0 8px;
   box-shadow: 0 0 5px #00b0f0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 .notify-banner a {
   color: #00b0f0;
@@ -280,4 +282,3 @@ html {
 .notify-banner a:hover {
   text-decoration: underline;
 }
-
