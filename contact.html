@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact — 2up3dn.art</title>
   <style>
+    @media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .logo img {
+    width: 150px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
     body {
       background-color: #2e2e2e;
       color: #eee;
@@ -49,7 +68,14 @@
     <p>Want to get in touch?</p>
     <p>Drop me a line at:</p>
     <p><a href="mailto:info@2up3dn.art">info@2up3dn.art</a></p>
-     <p style="color: #00b0f0;">(You can also copy → paste this email address into a new email message)</p>
+    <p>
+  <a href="#" onclick="copyEmail()" style="color: #00b0f0; text-decoration: underline;">
+    Click here to copy the email address
+  </a>
+</p>
+<p style="font-size: 0.9rem; opacity: 0.8;">
+  You can then paste it into your preferred email app.
+</p>
     <a href="/" class="back-link">← Back to home</a>
   </div>
 </body>
