@@ -2,51 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>2up3dn.art</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo"><a href="/">2up3dn.art</a></div>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="intro">
-      <h1>Welcome to 2up3dn.art</h1>
-      <p>Your art. Your mythos. Your gallery.</p>
-    </section>
+<nav class="main-menu">
+  <a href="#artwork">Gallery</a>
+  <a href="charcoals.html">Charcoals</a>
+  <a href="#about">About</a>
+  <a href="#videos">Videos</a>
+</nav>
 
-    <section class="gallery">
-      <div class="filters">
-        <!-- filters like Post Human, Charcoal, Portraits, etc. -->
-      </div>
-      <div class="image-grid">
-        <div class="gallery-item">
-          <img src="images/echo.jpg" alt="Echo" />
-          <p class="caption">Echo</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/laugh.jpg" alt="Laugh" />
-          <p class="caption">Laugh</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/mourning-star.jpg" alt="Mourning Star" />
-          <p class="caption">Mourning Star</p>
-        </div>
-        <!-- more images go here -->
-      </div>
-    </section>
-  </main>
+<header class="logo-header">
+  <div class="glitch-intro">2UP3DN // Bio-Mechanical Mythos</div>
 
-  <footer class="site-footer">
-    <p>&copy; 2up3dn.art</p>
-    <a href="/contact.html">Contact</a>
-  </footer>
+  <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
+  <div class="scroll-arrow">&#x25BC;</div>
+</header>
+
+<main class="gallery-wrap">
+
+  <section class="gallery-group fade-in" id="artwork">
+    <h2>Post Human (Oil)</h2>
+    <div class="gallery">
+      <div class="artwork posthuman"><img src="images/echo-in-red.jpg" alt="Echo in Red"><h3>Echo in Red</h3><p class="details">36&quot; x 48&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/laugh.jpg" alt="Laugh"><h3>Laugh and the world laughs at you (WIP)</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/mourning-star.jpg" alt="Mourning Star"><h3>Mourning Star</h3><p class="details">24&quot; x 36&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/lies.jpg" alt="Every Lie"><h3>Every lie you ever told is writ in granite</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/bridle.jpg" alt="Bridle"><h3>Bridle</h3><p class="details">30&quot; x 40&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/text-dont-call.jpg" alt="Text Don't Call"><h3>Text, Don’t Call</h3><p class="details">24&quot; x 24&quot; – Oil on Canvas</p></div>
+      <div class="artwork posthuman"><img src="images/joy-preset-3.jpg" alt="Joy Preset"><h3>Joy Preset #3</h3><p class="details">48&quot; x 48&quot; – Oil on Masonite</p></div>
+    </div>
+    <a class="shop-button" href="https://yourshop.com" target="_blank">Buy Prints</a>
+  </section>
+
+  <section id="about">
+    <h2>About the Artist</h2>
+    <p>I paint what breaks. Figures in descent, coded rituals, smiles too wide.</p>
+    <p>Born in Yorkshire, UK, and living in the USA for most of my life, I am a self-taught artist working primarily in oil paint. My work is rooted in figurative and portrait painting, but rather than telling direct stories, I focus on capturing something deeper—an emotional state, a tension, or a sense of transformation.</p>
+    <p>Recently, my work has explored the Bio-Mechanical Mythos and Post-Human Surrealism, blending organic and mechanical elements to examine identity, evolution, and what it means to exist in this changing world.</p>
+  </section>
+
+  <section id="videos">
+    <h2>Process Videos</h2>
+    <div class="gallery">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/gm1xgrYk_xk" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/8HX4dAeZLhU" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VWZVKlfd9tY" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/PfxfMPRtnnI" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="fullscreen view">
+</div>
+
 </body>
 </html>
