@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2up3dn Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-      });
-  </script>
+  <header class="logo-header">
+    <img src="images/logo.png" alt="2UP3DN Logo" class="centered-logo">
+  </header>
 
   <main class="blog-post">
     <h1>Late Night Code Breaking</h1>
+    <p>I always take breaks. Indeterminate lengths. I paint when I feel it—when I don’t, I don’t. But even in the off-time, I’m still moving the myth forward. That’s when the site came together. My own gallery, by my own hands—every button, every glitch, every late-night curse at broken code—all of it. It’s art-adjacent. Still the work.</p>
 
-    <p>I always take breaks. Indeterminate ones. I paint when I feel it. When I don’t, I don’t. But even during those stretches, I’ve never really stepped away. I built this site during one of those painting droughts. My own gallery, by my own hands — every button, every glitch, every late-night curse at broken code — all of it. It’s art-adjacent. It’s me still pushing the myth forward, even if the brush isn’t wet.</p>
+    <p>The only physical piece finished during that downtime was a charcoal portrait—a retirement gift for someone at the day job. That liminal space where "real life" lives. It came out soft, human. More human than I felt making it.</p>
 
-    <p>The only physical piece I finished during that time was this charcoal — a retirement gift for a friend at the day job. That liminal world where “real life” lives.</p>
-    <img src="images/20250517_195142~2.jpg" alt="Charcoal Retirement Gift" class="blog-image">
+    <figure>
+      <img src="images/retirement-gift-charcoal.jpg" alt="Retirement Charcoal Drawing">
+      <figcaption>Retirement Gift – Charcoal on Paper</figcaption>
+    </figure>
 
-    <p>I think it came out alright. Soft. Respectful. More human than I felt while making it.</p>
+    <p>It’s summer now. Gallery season. There’s a Black & White show at Art in the Couv I’m eyeing—thinking about submitting a couple charcoals. We’ll see.</p>
 
-    <p>But the itch is back. That hum in the gut that says: *time to finish things.* These are what I’m circling now:</p>
+    <h2>Back to Paint</h2>
+    <p>Something’s waking up again. The itch to paint is back. I’ve got a few on deck—half-done, half-haunted. These are next:</p>
 
-    <h2>WIPs</h2>
+    <figure>
+      <img src="images/smile-wip.jpg" alt="Smile WIP">
+      <figcaption><strong>Smile, and the world laughs at you</strong> – WIP, Oil on Canvas</figcaption>
+    </figure>
 
-    <div class="gallery">
-      <div class="artwork">
-        <img src="images/IMG_20250509_115745 1.jpg" alt="Smile">
-        <h3>Smile, and the world laughs at you <span class="wip">(WIP)</span></h3>
-        <p class="details">Oil on Canvas – Yellow tones, bleak grin, working through.</p>
-      </div>
+    <figure>
+      <img src="images/limbo-wip.jpg" alt="Limbo WIP">
+      <figcaption><strong>Limbo</strong> – WIP, Oil on Canvas</figcaption>
+    </figure>
 
-      <div class="artwork">
-        <img src="images/IMG_20250321_133807_1 1.jpg" alt="Limbo">
-        <h3>Limbo <span class="wip">(WIP)</span></h3>
-        <p class="details">Oil on Canvas – That orange square. That silent scream. That holding-it-in.</p>
-      </div>
+    <figure>
+      <img src="images/yearn-wip.jpg" alt="Yearn WIP">
+      <figcaption><strong>Yearn</strong> – WIP, Oil on Masonite</figcaption>
+    </figure>
 
-      <div class="artwork">
-        <img src="images/20250124_103241_HDR~2.jpg" alt="Yearn">
-        <h3>Yearn <span class="wip">(WIP)</span></h3>
-        <p class="details">Oil on Masonite – Large, white, brittle. The ache sits heavy.</p>
-      </div>
+    <figure>
+      <img src="images/glow-wip.jpg" alt="Glow WIP">
+      <figcaption><strong>Glow</strong> – WIP, Oil on Masonite</figcaption>
+    </figure>
 
-      <div class="artwork">
-        <img src="images/20250117_083314_HDR.jpg" alt="Glow">
-        <h3>Glow <span class="wip">(WIP)</span></h3>
-        <p class="details">Oil on Masonite – Long, vertical. A pale woman. A flickering halo.</p>
-      </div>
-    </div>
+    <p>Not rushing it. But I feel the pull again. Time to move.</p>
 
-    <p>It’s also gallery season. There’s a Black & White show at Art in the Couv I’m eyeing — maybe one of the charcoals finds its way in. Maybe not. But I want to show again. To push the work out into the world.</p>
+    <h2>Poll?</h2>
+    <p>Thinking of adding a poll here—let folks vote on which piece I should finish next. Low-stakes. Just a way to share the process a bit more.</p>
 
-    <p>Question for anyone still reading: What should I finish next?</p>
-    <p><strong>Poll incoming soon.</strong> Let’s see who wins — the ghost grinning in yellow or the square of silence.</p>
-
-    <p>— Brownie</p>
+    <p>More soon. Maybe even regularly.</p>
   </main>
 </body>
 </html>
