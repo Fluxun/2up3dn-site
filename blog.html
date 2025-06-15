@@ -1,92 +1,109 @@
-<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2up3dn Blog</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     .blog-layout {
       display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem auto;
+      max-width: 1000px;
+      gap: 2rem;
+      padding: 0 1rem;
     }
-    .sidebar {
-      width: 200px;
-      padding-right: 2rem;
-      border-right: 1px solid #555;
+
+    .blog-sidebar {
+      flex: 1 1 200px;
+      background-color: #2e3338;
+      padding: 1rem;
+      border-radius: 8px;
     }
-    .sidebar h3 {
+
+    .blog-sidebar h2 {
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      color: #fff;
     }
-    .sidebar ul {
+
+    .blog-sidebar ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
-    .sidebar li {
+
+    .blog-sidebar li {
       margin-bottom: 0.5rem;
     }
-    .sidebar a {
+
+    .blog-sidebar a {
+      color: #a5bae0;
       text-decoration: none;
-      color: #ccc;
     }
-    .sidebar a:hover {
-      color: white;
-      text-decoration: underline;
+
+    .blog-main {
+      flex: 3 1 600px;
     }
-    .blog-post {
-      flex: 1;
-      padding-left: 2rem;
-    }
-    .blog-post img {
+
+    .blog-main img {
       max-width: 100%;
       height: auto;
       display: block;
       margin: 1rem auto;
     }
-    .blog-post h1, .blog-post h2 {
+
+    .blog-main h1, .blog-main h2, .blog-main h3 {
       text-align: center;
     }
-    .blog-post p {
+
+    .blog-main p {
       font-size: 1.1rem;
       line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .blog-layout {
+        flex-direction: column;
+      }
+
+      .blog-sidebar, .blog-main {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="main-menu">
-    <a href="/">Gallery</a>
-    <a href="charcoals.html">Charcoals</a>
-    <a href="about.html">About</a>
-    <a href="videos.html">Videos</a>
-    <a href="blog.html" class="active">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
 
   <main class="blog-layout">
-    <aside class="sidebar">
-      <h3>Posts</h3>
+    <aside class="blog-sidebar">
+      <h2>Posts</h2>
       <ul>
-        <li><a href="#latenight">Late Night Code Breaking</a></li>
-        <!-- Add more post links here later -->
+        <li><a href="blog-late-night-code-breaking.html">Late Night Code Breaking</a></li>
+        <!-- More posts to be listed here -->
       </ul>
     </aside>
 
-    <div class="blog-post">
-      <img src="images/logo.png" alt="2up3dn Logo" style="width: 180px; margin: 1rem auto;" />
-
-      <h1 id="latenight">Late Night Code Breaking</h1>
+    <section class="blog-main">
+      <h1>Late Night Code Breaking</h1>
       <p>I took a break. I always do. Indeterminate length. I paint when I feel it. When I don’t, I don’t. But even when I’m not painting, I try to move things forward.</p>
 
       <p>My own gallery, by my own hands — every button, every glitch, every late-night curse at broken code — all of it. It’s art-adjacent. It’s me still pushing the myth forward, even if the brush isn’t wet.</p>
 
       <p>The only physical piece I finished during that downtime was a charcoal — a retirement gift for someone at the day job. That liminal world where “real life” lives. I think it came out alright. Soft, respectful. More human than I felt while making it.</p>
+
       <img src="images/charcoal-retirement.jpg" alt="Charcoal Portrait - Retirement Gift">
 
       <p>And I’ve been circling the studio again. The two oils I’ve been wrestling with — they’re both loud in my head again.</p>
+
       <img src="images/smile.jpg" alt="Smile WIP">
       <p><strong>Smile, and the world laughs at you</strong> – WIP, Oil on Canvas</p>
 
@@ -99,12 +116,11 @@
       <img src="images/glow.jpg" alt="Glow WIP">
       <p><strong>Glow</strong> – WIP, Oil on Masonite</p>
 
-      <h2>Poll?</h2>
-      <p>Thinking of adding a poll here—let folks vote on which piece I should finish next. Low-tech. Simple. Maybe just a button and a tally. No promises. But I like the idea of a signal in the dark.</p>
+      <p>Not rushing it. But I feel the pull again. Time to move.</p>
 
       <h2>Gallery Season</h2>
       <p>It’s that time again. Thinking about submitting to a few shows. There’s a black and white show at Art in the Couv I’ve got my eye on. Some of the charcoals might belong there. Might be time to let them out into the wild.</p>
-    </div>
+    </section>
   </main>
 </body>
 </html>
