@@ -2,46 +2,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>2up3dn Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    .blog-container {
-      max-width: 800px;
+    .blog-layout {
+      display: flex;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
-    .blog-container img {
+    .sidebar {
+      width: 200px;
+      padding-right: 2rem;
+      border-right: 1px solid #555;
+    }
+    .sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 0.5rem;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #ccc;
+    }
+    .sidebar a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    .blog-post {
+      flex: 1;
+      padding-left: 2rem;
+    }
+    .blog-post img {
       max-width: 100%;
       height: auto;
       display: block;
       margin: 1rem auto;
     }
-    .blog-container h1, .blog-container h2, .blog-container h3 {
+    .blog-post h1, .blog-post h2 {
       text-align: center;
     }
-    .blog-container p {
+    .blog-post p {
       font-size: 1.1rem;
       line-height: 1.6;
-    }
-    .post-index {
-      text-align: left;
-      margin-bottom: 2rem;
-    }
-    .post-index ul {
-      list-style: none;
-      padding: 0;
-    }
-    .post-index li {
-      margin-bottom: 0.5rem;
-    }
-    .post-index a {
-      text-decoration: none;
-      color: var(--link-color, #00b0f0);
-    }
-    .post-index a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -55,53 +66,44 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="gallery-wrap">
-    <div class="blog-container">
-      <img src="images/logo.png" alt="2up3dn Logo" style="width: 180px; margin: 1rem auto;">
+  <main class="blog-layout">
+    <aside class="sidebar">
+      <h3>Posts</h3>
+      <ul>
+        <li><a href="#latenight">Late Night Code Breaking</a></li>
+        <!-- Add more post links here later -->
+      </ul>
+    </aside>
 
-      <div class="post-index">
-        <h2>Blog Posts</h2>
-        <ul>
-          <li><a href="#late-night-code">Late Night Code Breaking</a></li>
-          <!-- Add more posts here later -->
-        </ul>
-      </div>
+    <div class="blog-post">
+      <img src="images/logo.png" alt="2up3dn Logo" style="width: 180px; margin: 1rem auto;" />
 
-      <article id="late-night-code">
-        <h1>Late Night Code Breaking</h1>
+      <h1 id="latenight">Late Night Code Breaking</h1>
+      <p>I took a break. I always do. Indeterminate length. I paint when I feel it. When I don’t, I don’t. But even when I’m not painting, I try to move things forward.</p>
 
-        <p>I took a break. I always do. Indeterminate length. I paint when I feel it. When I don’t, I don’t. But even when I’m not painting, I try to move things forward.</p>
+      <p>My own gallery, by my own hands — every button, every glitch, every late-night curse at broken code — all of it. It’s art-adjacent. It’s me still pushing the myth forward, even if the brush isn’t wet.</p>
 
-        <p>My own gallery, by my own hands — every button, every glitch, every late-night curse at broken code — all of it. It’s art-adjacent. It’s me still pushing the myth forward, even if the brush isn’t wet.</p>
+      <p>The only physical piece I finished during that downtime was a charcoal — a retirement gift for someone at the day job. That liminal world where “real life” lives. I think it came out alright. Soft, respectful. More human than I felt while making it.</p>
+      <img src="images/charcoal-retirement.jpg" alt="Charcoal Portrait - Retirement Gift">
 
-        <p>The only physical piece I finished during that downtime was a charcoal — a retirement gift for someone at the day job. That liminal world where “real life” lives. I think it came out alright. Soft, respectful. More human than I felt while making it.</p>
+      <p>And I’ve been circling the studio again. The two oils I’ve been wrestling with — they’re both loud in my head again.</p>
+      <img src="images/smile.jpg" alt="Smile WIP">
+      <p><strong>Smile, and the world laughs at you</strong> – WIP, Oil on Canvas</p>
 
-        <img src="images/charcoal-retirement.jpg" alt="Charcoal Portrait - Retirement Gift">
+      <img src="images/limbo.jpg" alt="Limbo WIP">
+      <p><strong>Limbo</strong> – WIP, Oil on Canvas</p>
 
-        <p>And I’ve been circling the studio again. The two oils I’ve been wrestling with — they’re both loud in my head again.</p>
+      <img src="images/yearn.jpg" alt="Yearn WIP">
+      <p><strong>Yearn</strong> – WIP, Oil on Masonite</p>
 
-        <img src="images/smile.jpg" alt="Smile WIP">
-        <p><strong>Smile, and the world laughs at you</strong> – WIP, Oil on Canvas</p>
+      <img src="images/glow.jpg" alt="Glow WIP">
+      <p><strong>Glow</strong> – WIP, Oil on Masonite</p>
 
-        <img src="images/limbo.jpg" alt="Limbo WIP">
-        <p><strong>Limbo</strong> – WIP, Oil on Canvas</p>
+      <h2>Poll?</h2>
+      <p>Thinking of adding a poll here—let folks vote on which piece I should finish next. Low-tech. Simple. Maybe just a button and a tally. No promises. But I like the idea of a signal in the dark.</p>
 
-        <p>The others are quieter, but still in orbit:</p>
-
-        <img src="images/yearn.jpg" alt="Yearn WIP">
-        <p><strong>Yearn</strong> – WIP, Oil on Masonite</p>
-
-        <img src="images/glow.jpg" alt="Glow WIP">
-        <p><strong>Glow</strong> – WIP, Oil on Masonite</p>
-
-        <p>Not rushing it. But I feel the pull again. Time to move.</p>
-
-        <h2>Poll?</h2>
-        <p>Thinking of adding a poll here—let folks vote on which piece I should finish next. Low-tech. Simple. Maybe just a button and a tally. No promises. But I like the idea of a signal in the dark.</p>
-
-        <h2>Gallery Season</h2>
-        <p>It’s that time again. Thinking about submitting to a few shows. There’s a black and white show at Art in the Couv I’ve got my eye on. Some of the charcoals might belong there. Might be time to let them out into the wild.</p>
-      </article>
+      <h2>Gallery Season</h2>
+      <p>It’s that time again. Thinking about submitting to a few shows. There’s a black and white show at Art in the Couv I’ve got my eye on. Some of the charcoals might belong there. Might be time to let them out into the wild.</p>
     </div>
   </main>
 </body>
