@@ -1,7 +1,18 @@
 <nav class="main-menu">
-  <a href="/">Gallery</a>
-  <a href="charcoals.html">Charcoals</a>
-  <a href="about.html">About</a>
-  <a href="videos.html">Videos</a>
-  <a href="contact.html">Contact</a>
+  <a href="/" id="nav-gallery">Gallery</a>
+  <a href="charcoals.html" id="nav-charcoals">Charcoals</a>
+  <a href="about.html" id="nav-about">About</a>
+  <a href="videos.html" id="nav-videos">Videos</a>
+  <a href="blog.html" id="nav-blog">Blog</a>
+  <a href="contact.html" id="nav-contact">Contact</a>
 </nav>
+
+<script>
+  const path = window.location.pathname;
+  if (path.includes('charcoals')) document.getElementById('nav-charcoals').classList.add('active');
+  else if (path.includes('about')) document.getElementById('nav-about').classList.add('active');
+  else if (path.includes('videos')) document.getElementById('nav-videos').classList.add('active');
+  else if (path.includes('blog')) document.getElementById('nav-blog').classList.add('active');
+  else if (path.includes('contact')) document.getElementById('nav-contact').classList.add('active');
+  else document.getElementById('nav-gallery').classList.add('active');
+</script>
