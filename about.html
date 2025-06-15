@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-mode">
-  <nav class="main-menu">
-    <a href="/">Gallery</a>
-    <a href="charcoals.html">Charcoals</a>
-    <a href="about.html">About</a>
-    <a href="videos.html">Videos</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<div id="nav-placeholder"></div>
+<script>
+  fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 
   <main class="gallery-wrap">
     <section id="about" style="text-align: center;">
