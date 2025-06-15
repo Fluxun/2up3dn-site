@@ -1,94 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2up3dn Blog</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #393f47;
-      color: #eee;
-      font-family: monospace;
-      margin: 0;
-      padding: 2rem;
-    }
-    a {
-      color: #00b0f0;
-      text-decoration: none;
-    }
-    .blog-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1, h2, h3, p {
-      text-align: center;
-    }
-    img.blog-image {
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-      border: 2px solid #444;
-    }
-    .logo {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-    .logo img {
-      width: 200px;
-    }
-    .caption {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .poll-header {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="logo">
-    <a href="/"><img src="images/logo.png" alt="2up3dn.art logo" /></a>
-  </div>
-  <div class="blog-container">
-    <h1>Late Night Code Breaking</h1>
-    <p>I always take breaks. Indeterminate stretches where the brushes dry, and the studio lights stay off. But even then, I'm still building the myth.</p>
+/* Updated site-wide menu styles */
 
-    <p>My own gallery, by my own hands — every button, every glitch, every late-night curse at broken code — all of it. It’s art-adjacent. It’s me still pushing the myth forward, even if the brush isn’t wet.</p>
+.main-menu {
+  background-color: #2e2e2e;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
 
-    <p>The only physical piece I finished during that downtime was a charcoal — a retirement gift for someone at the day job. That liminal world where “real life” lives. I think it came out alright. Soft, respectful. More human than I felt while making it.</p>
+.main-menu a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    <img class="blog-image" src="images/retirement-gift-charcoal.jpg" alt="Charcoal Retirement Gift">
+.main-menu a:hover {
+  background-color: #444;
+  color: #00b0f0;
+}
 
-    <p>Now, I’m feeling it again.</p>
-    <p>Two oils on deck — both WIPs. One’s working title is <strong>Smile, and the world laughs at you</strong>. The other’s just a square right now, but it’s called <strong>Limbo</strong>. Themes? Pressure. Containment. Humiliation. The usual.</p>
+/* Responsive vertical nav for mobile */
+@media (max-width: 600px) {
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    <img class="blog-image" src="images/smile-wip.jpg" alt="Smile WIP">
-    <div class="caption">Smile – WIP, Oil on Canvas</div>
-
-    <img class="blog-image" src="images/limbo-wip.jpg" alt="Limbo WIP">
-    <div class="caption">Limbo – WIP, Oil on Canvas</div>
-
-    <p>I’ve also got two pieces on masonite. The large one is called <strong>Yearn</strong>. The tall one with the halo? That’s <strong>Glow</strong>. Both still breathing, still waiting.</p>
-
-    <img class="blog-image" src="images/yearn-wip.jpg" alt="Yearn WIP">
-    <div class="caption">Yearn – WIP, Oil on Masonite</div>
-
-    <img class="blog-image" src="images/glow-wip.jpg" alt="Glow WIP">
-    <div class="caption">Glow – WIP, Oil on Masonite</div>
-
-    <p>Not rushing it. But I feel the pull again. Time to move.</p>
-
-    <div class="poll-header">Poll?</div>
-    <p>Thinking of adding a poll here—let folks vote on which piece I should finish next. Let me know if you’d use it.</p>
-
-    <p>Also—it's gallery season. Might try to get a few charcoals into a local black-and-white show. We'll see if I can be arsed.</p>
-  </div>
-</body>
-</html>
+  .main-menu a {
+    display: block;
+    margin: 0.25rem 0;
+  }
+}
