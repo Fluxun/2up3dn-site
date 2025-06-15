@@ -1,37 +1,87 @@
-/* Updated site-wide menu styles */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2up3dn Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      color: #eee;
+      font-family: monospace;
+    }
+    .blog-post img {
+      max-width: 100%;
+      width: 300px;
+      display: block;
+      margin: 1rem auto;
+      border: 1px solid #444;
+    }
+    .blog-post h1, .blog-post h2, .blog-post h3 {
+      text-align: center;
+    }
+    .blog-post p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .blog-post .caption {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
 
-.main-menu {
-  background-color: #2e2e2e;
-  padding: 1rem 2rem;
-  text-align: center;
-  font-family: monospace;
-  font-size: 1.1rem;
-}
+  <main class="blog-post">
+    <img src="images/logo.png" alt="2up3dn Logo" style="width: 200px; display: block; margin: 2rem auto;">
 
-.main-menu a {
-  color: #eee;
-  text-decoration: none;
-  margin: 0 1rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    <h1>Late Night Code Breaking</h1>
 
-.main-menu a:hover {
-  background-color: #444;
-  color: #00b0f0;
-}
+    <p>I took a break. I always do. Indeterminate, necessary. I paint when I feel it — and when I don’t, I don’t.</p>
 
-/* Responsive vertical nav for mobile */
-@media (max-width: 600px) {
-  .main-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    <p>But even then, I was building. The site you’re on now? Mine. Every pixel, every button, every late-night curse at broken code. Still part of the mythos. Still forward motion.</p>
 
-  .main-menu a {
-    display: block;
-    margin: 0.25rem 0;
-  }
-}
+    <p>The only physical piece I finished in that downtime was this charcoal — a retirement gift for someone from the day job. That weird liminal place where "real life" lives. It came out human. Softer than I felt while drawing it.</p>
+
+    <img src="images/charcoal-retirement.jpg" alt="Retirement Gift">
+    <p class="caption"><strong>Charcoal Portrait</strong> – Retirement Gift</p>
+
+    <p>But lately... I feel the pull again. The itch. The crawl under the skin that says “pick up the brush.”</p>
+
+    <p>These are the pieces looming now — WIPs that demand finishing:</p>
+
+    <img src="images/smile.jpg" alt="Smile WIP">
+    <p class="caption"><strong>Smile, and the world laughs at you</strong> – WIP, Oil on Canvas</p>
+
+    <img src="images/limbo.jpg" alt="Limbo WIP">
+    <p class="caption"><strong>Limbo</strong> – WIP, Oil on Canvas</p>
+
+    <img src="images/yearn.jpg" alt="Yearn WIP">
+    <p class="caption"><strong>Yearn</strong> – WIP, Oil on Masonite</p>
+
+    <img src="images/glow.jpg" alt="Glow WIP">
+    <p class="caption"><strong>Glow</strong> – WIP, Oil on Masonite</p>
+
+    <p>Not rushing it. But it’s time. I feel it.</p>
+
+    <h2>Poll?</h2>
+    <p>Thinking of adding a poll here — let folks vote on which piece I should finish next. Low-stakes feedback, but fun.</p>
+
+    <p>Also, it’s gallery season. Might submit a few pieces. There’s a black-and-white show at Art in the Couv I’ve got my eye on. Some of the charcoals might find a home there.</p>
+  </main>
+</body>
+</html>
