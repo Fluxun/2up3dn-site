@@ -46,6 +46,11 @@ body {
   backface-visibility: hidden;
 }
 
+.highlight-note {
+  color: #FFD700; /* bright gold/yellow */
+  font-weight: normal; /* optional: so it doesn’t look bolder than the title */
+}
+
 @keyframes globeSpin {
   from { transform: rotateY(0deg); }
   to   { transform: rotateY(360deg); }
