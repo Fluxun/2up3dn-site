@@ -71,6 +71,10 @@ body {
   margin-top: var(--gap);
   color: var(--accent);
 }
+.highlight-note {
+  color: #FFD700; /* gold/yellow */
+  font-weight: normal; /* optional */
+}
 
 .gallery {
   column-count: 3;
